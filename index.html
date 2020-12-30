@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Lora|Roboto:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <main>
+        <nav>
+            <!--collapseable menu hamburger-->
+            <img src='./images/close-button.svg' alt='menu' class='close-button' id='close-menu'>
+            <ul>
+                <li>
+                    <a href='#'>Home</a>
+                    <span>Welcome to the site</span>
+                </li>
+                <li>
+                    <a href='#'>About Me</a>
+                    <span>I'm working on my portfolio</span>
+                </li>
+                <li>
+                    <a href='#'>Gallery</a>
+                    <span>Gallery of my work</span>
+                </li>
+                <li>
+                    <a href='./contact.html'>Contact</a>
+                    <span>Contact me here.</span>
+                </li>
+            </ul>
+        </nav>
+        <header>
+            <a href='#' class='logo'>Logo</a>
+            <img src='./images/burger-menu.svg' alt='menu' class='menu-btn' id='open-menu'>
+        </header>
+        <section id='hero-splash'>
+            <h1>Portfolio Website</h1>
+        </section>
+        <section class='card-list'>
+            <h2>Projects</h2>
+            <article>
+                <div class='card'>
+                    <div class='card-image'><img src='./images/WSMV-js-0129-1.jpg' alt='runner-img'>
+                    </div>
+                    <div class='card-title title-light'>
+                        <h3>Photography</h3>
+                        <p class='hidden-text'>Lifestyle and travel photography</p>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <div class='card'>
+                    <div class='card-image'><img src='./images/0N2A6144.JPG' alt='pic-taking'>
+                    </div>
+                    <div class='card-title title-dark'>
+                        <h3>Web Development</h3>
+                        <p class='hidden-text'>Front end web development & Python</p>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <div class='card'>
+                    <div class='card-image'><img src='./images/0N2A7391.JPG' alt='biking img'>
+                    </div>
+                    <div class='card-title title-light'>
+                        <h3>Cinematography</h3>
+                        <p class='hidden-text'>Film editing and cinmatography services</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <seciton>
+            <article class='about-me'>
+                <h2>About Me</h2>
+                <span class='description-left'><span class='big'>My name is</span> <b>Josh Smith</b>, I've been working with front end languages for a couple years now. I've recently begun expanding my knowledge on the subjects as well as taking up an interest in python development for backend purposes. I'd like to eventually build an API to allow other web designers to access my photo/film collections.</span>
+                <span class='description-right'>
+                    <span class='big'>Other projects</span> I've worked on include ongoing photography and cinematography shoots around the world, working with athletes and other adventure/travel photographers to create exciting media. Contact me <a href='./contact.html' class='text-contact'>Here</a> to get more info!
+                </span>
+            </article>
+        </seciton>
+    </main>
+    <footer>
+        <p>Copyright Wintersun Media 2021</p>
+        <div class='social-bar'>
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-github"></i>
+        </div>
+    </footer>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

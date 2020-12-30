@@ -1,0 +1,362 @@
+/* Main page Styles */
+body,
+html {
+    font-size: 16px;
+    font-family: 'Lora', Serif;
+    text-align: center;
+    color: #F3F4F0;
+    background-color: #6A634E;
+    margin: 0;
+    overflow-x: hidden;
+    margin-bottom: 2%;
+}
+
+body a,
+html a {
+    text-decoration: none;
+}
+
+
+header {
+    padding: 3em;
+    align-content: center;
+}
+
+header .logo {
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+header .menu-btn {
+    width: 1.125rem;
+    right: 5%;
+    cursor: pointer;
+    position: fixed;
+    opacity: 1;
+    top: 2rem;
+}
+
+@media only screen and (min-width: 510px) {
+    section {
+        margin: 0;
+        width: 100%;
+    }
+}
+
+
+
+/* Navigation styling  */
+
+nav {
+    position: fixed;
+    background: #323935;
+    padding: 2em;
+    top: 0;
+    right: 0;
+    width: calc(100% - 4em);
+    height: calc(100vh - 4em);
+    visibility: hidden;
+    opacity: 0;
+    overflow: hidden;
+    transition: visibility 0.4s linear, opacity 1s;
+}
+
+nav .close-button {
+    display: flex;
+    position: absolute;
+    right: 5%;
+    top: 2rem;
+    width: 1.125rem;
+    cursor: pointer;
+    opacity: 1;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 10% auto 0 auto;
+    padding: 0;
+    display: grid;
+    padding-top: 5%;
+    grid-template-columns: repeat(1, auto);
+    width: 80%;
+}
+
+nav ul li {
+    margin-bottom: 5%;
+}
+
+nav ul a {
+    color: #F3F4F0;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+nav ul span {
+    display: none;
+}
+
+/* Desktop Styles for Nav and header elements */
+@media only screen and (min-width: 510px) {
+    header .logo {
+        color: #fff;
+        font-weight: bold;
+        font-size: 2rem;
+        float: left;
+        margin-left: 5%;
+    }
+
+    header .menu-btn {
+        width: 2%;
+    }
+
+    nav ul {
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        width: 80%;
+    }
+
+    nav ul a {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    nav ul span {
+        color: #fff;
+        display: block;
+        font-size: 1rem;
+        margin-top: 20px;
+    }
+
+}
+
+/* Splash/Hero Image styling */
+#hero-splash {
+    padding: 4rem;
+    height: 70vh;
+    background-image: url(../images/WSMV-js-0127-1.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #323935;
+}
+
+section h1 {
+    font-size: 2em;
+    margin-top: 16rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    text-transform: uppercase;
+}
+
+section h1::before {
+    content: '';
+    border-top: 0.25rem solid #323935;
+    display: block;
+}
+
+/* Gallery & text explanation pieces */
+.card-list {
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: #F3F4F0;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+.card-list h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #323935;
+}
+
+.card {
+    margin: 2rem auto;
+    width: 19rem;
+    height: 19rem;
+    border-radius: 2.5rem;
+    box-shadow: 0.25rem 0.25rem 2rem 0.5rem rgba(0, 0, 0, 0.25), -0.25rem -0.25rem 2rem 0.5rem rgba(0, 0, 0, 0.22);
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.card .card-image {
+    width: inherit;
+    height: inherit;
+    border-radius: 2.5rem;
+}
+
+.card .card-image img {
+    width: inherit;
+    height: inherit;
+    border-radius: 2.5rem;
+    object-fit: cover;
+}
+
+
+.card .card-title h3 {
+    text-align: center;
+    border-radius: 0rem 0rem 2.5rem 2.5rem;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-top: -6rem;
+    margin-bottom: 0;
+    height: 2.5rem;
+}
+
+.hidden-text {
+    visibility: hidden;
+    opacity: 0;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1rem;
+    max-width: 90%;
+    font-weight: bold;
+    margin-top: 1%;
+    transition: all 0.3s ease-in-out 0.1s;
+}
+
+.card:hover .hidden-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+.card:hover {
+    transform: scale(0.9, 0.9);
+    box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25),
+        -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
+}
+
+
+.title-light {
+    color: #F3F4F0;
+}
+
+.title-dark {
+    color: #323935;
+}
+
+@media all and (min-width: 510px) {
+    .card-list {
+        /* On small screens, we are no longer using row direction but column */
+        flex-direction: row;
+    }
+
+    .card-list h2 {
+        position: absolute;
+        top: 5%;
+    }
+
+    section h1 {
+        font-size: 4em;
+    }
+}
+
+/*description section */
+.about-me {
+    width: 100%;
+    padding-top: 10%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.about-me .description-left,
+.about-me .description-right {
+    padding-top: 3%;
+    padding-bottom: 10%;
+    width: 60%;
+    margin: 0px auto 0 auto;
+    display: block;
+    letter-spacing: 0.075rem;
+    }
+.about-me .big {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.about-me a {
+    color: #F3F4F0;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.about-me a:hover {
+    color: #323935;
+
+}
+
+@media only screen and (min-width: 510px) {
+    .about-me .description-left{
+        margin-left: 5%;
+        float: left;
+    }
+    .about-me .description-right {
+        margin-right: 5%;
+        float: right;
+    }
+    .about-me .description-left,
+    .about-me .description-right {
+        display: inline-block;
+        width: 40%;
+
+    }
+}
+
+/* Contact Page */
+#contact-page {
+    font-family: 'Roboto', sans-serif;
+}
+
+#contact-page h2 {
+    font-weight: bold;
+    font-size: 2rem;   
+}
+
+#contact-page p {
+    font-size: 1rem;
+}
+
+.contact-icons .fa {
+    cursor: pointer;
+    margin: 2%;
+}
+
+
+
+
+
+
+
+/* footer styles */
+footer {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background-color: #323935;
+    color: #BEB8A8;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+footer p {
+    margin-left: 5%;
+    font-weight: bold;
+}
+
+footer .social-bar {
+    justify-self: end;
+    margin-right: 5%;
+    align-self: center;
+    width: 10%;
+}
+
+footer .fa {
+    margin-right: 3%;
+    width: 1rem;
+    cursor: pointer;
+}
